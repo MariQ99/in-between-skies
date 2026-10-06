@@ -209,7 +209,15 @@ function tile(src) {
   d.innerHTML = '<img class="result" loading="lazy" alt="Visitor photo">';
   d.firstChild.src = src; return d;
 }
-function resetGallery() { grid.replaceChildren(); cursor = ""; ended = false; loadMore(); }
+function resetGallery() {
+  grid.replaceChildren();
+  cursor = "";
+  ended = false;
+  loading = false;
+  sentinel.textContent = "Loading…";
+  loadMore();
+}
+  
 async function loadMore() {
   if (loading || ended) return; loading = true; sentinel.textContent = "Loading…";
   try {
