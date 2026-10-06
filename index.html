@@ -197,7 +197,7 @@ async function upload(dataUrl) {
 }
 $("#add").onclick = async () => {
   const b = $("#add"); b.disabled = true; $("#add span").textContent = "Adding…"; $("#msg").innerHTML = "";
-  if (await upload(shot)) { $("#add span").textContent = "Added to Gallery ✓"; }
+  if (await upload(shot)) { $("#add span").textContent = "Added to Gallery"; }
   else { b.disabled = false; $("#add span").textContent = "Add to Gallery"; }
 };
 
