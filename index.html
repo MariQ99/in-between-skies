@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="only light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>In Between Skies</title>
+<link rel="stylesheet" href="https://use.typekit.net/zcs2uay.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#40415b;--sky:#85a9cc;font-family:"Halyard Display",Outfit,system-ui,sans-serif}
+:root{--ink:#40415b;--sky:#85a9cc;color-scheme:only light;font-family:"halyard-display","Halyard Display",Outfit,system-ui,sans-serif}
 *{box-sizing:border-box;margin:0}
 html,body{min-height:100%}
-body{color:#fff;background:linear-gradient(#5a98c8 0%,#a9cadc 28%,#a9a9d4 48%,#242e50 66%,#f58c29 100%) fixed}
+body{color:#fff;font-weight:300;letter-spacing:.01em;line-height:1.174;background:linear-gradient(#5a98c8 0%,#a9cadc 28%,#a9a9d4 48%,#242e50 66%,#f58c29 100%) fixed}
 #bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1}
 main{max-width:440px;margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 24px 40px}
 nav{display:flex;align-items:center;gap:22px;font-size:32px;margin:14px 0 24px 0}
 nav svg{width:36px;height:36px}
 nav a{color:#fff;text-decoration:none;font-weight:300;opacity:.75}
-nav a.on{font-weight:400;opacity:1}
-.intro{font-size:16px;line-height:1.35;font-weight:300;margin-bottom:28px}
-.intro b{font-weight:600}
+nav a.on{font-weight:300;opacity:1}
+.intro{font-size:17px;line-height:1.174;font-weight:300;margin-bottom:28px}
+.intro b{font-weight:500}
 .frame{position:relative;width:min(371px,100%);aspect-ratio:743/927;background:#fff;margin:0 auto}
 .cam{position:absolute;left:7.13%;top:7.23%;width:85.87%;height:85.65%;background:#000000;overflow:hidden}
 .cam video,.cam img{width:100%;height:100%;object-fit:cover;display:block}
@@ -29,13 +31,13 @@ nav a.on{font-weight:400;opacity:1}
 #flip{position:absolute;right:7.82%;top:7.78%;width:12.4%;aspect-ratio:1;border:0;background:none;padding:0;cursor:pointer;display:block}
 .live #flip{display:block}
 #flip svg{width:100%;height:100%;display:block}
-.btn{display:block;width:min(278px,100%);height:60px;margin:36px auto 0;border:0;border-radius:10px;background:#fff;font:inherit;font-size:32px;font-weight:300;cursor:pointer}
+.btn{display:block;width:min(278px,100%);height:60px;margin:36px auto 0;border:0;border-radius:10px;background:#fff;font:inherit;letter-spacing:inherit;font-size:32px;font-weight:300;cursor:pointer}
 .btn span{background:linear-gradient(#40415b,#85a9cc);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .btn:disabled{opacity:.7;cursor:default}
-#add{margin-top:20px;width:min(366px,100%)}
-.row{display:flex;gap:40px;justify-content:center}
-.row .btn{margin-top:36px;width:163px;flex:none;font-size:30px}
-.note{font-family:Antic,Outfit,sans-serif;font-size:14px;line-height:20px;text-align:center;margin:30px auto 0;max-width:369px;font-weight:300}
+#add{margin-top:20px;width:min(371px,100%)}
+.row{display:flex;gap:20px;width:min(371px,100%);margin:36px auto 0}
+.row .btn{margin:0;width:auto;flex:1;font-size:28px;padding:0 10px}
+.note{font-size:14px;line-height:1.3;text-align:center;margin:30px auto 0;max-width:369px;font-weight:300}
 .hide{display:none!important}
 #wipe{position:fixed;inset:0;z-index:20;overflow:hidden;pointer-events:none;opacity:0}
 #wipe svg{position:absolute;left:50%;top:50%;width:calc(max(100vw,100vh)*2.6);height:calc(max(100vw,100vh)*2.6);transform:translate(-50%,-50%) scale(0)}
@@ -45,10 +47,10 @@ nav a.on{font-weight:400;opacity:1}
 @keyframes starwipe{0%{transform:translate(-50%,-50%) rotate(0) scale(0);animation-timing-function:cubic-bezier(.5,0,.5,1)}79.8%,100%{transform:translate(-50%,-50%) rotate(207deg) scale(1.09)}}
 #modal{position:fixed;inset:0;background:rgba(76,76,76,.75);display:flex;align-items:center;justify-content:center;padding:24px;z-index:10}
 .card{background:#fff;border-radius:10px;width:319px;max-width:100%;padding:22px 20px;color:var(--ink)}
-.card h2{font-weight:400;font-size:36px;text-align:center;background:linear-gradient(#40415b,#85a9cc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.card p{font-size:14px;line-height:20px;margin-top:12px;font-weight:300}
-.card ul{margin:0 0 0 18px;font-size:14px;line-height:20px;padding:0;font-weight:300}
-.card .agree{display:block;width:100%;height:60px;margin-top:22px;border:0;border-radius:10px;background:linear-gradient(90deg,#535e7a,#7895b7);color:#fff;font:inherit;font-size:24px;font-weight:300;cursor:pointer}
+.card h2{font-weight:300;font-size:36px;text-align:center;background:linear-gradient(#40415b,#85a9cc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card p{font-size:15px;line-height:1.3;margin-top:12px;font-weight:300}
+.card ul{margin:0 0 0 18px;font-size:15px;line-height:1.3;padding:0;font-weight:300}
+.card .agree{display:block;width:100%;height:60px;margin-top:22px;border:0;border-radius:10px;background:linear-gradient(90deg,#535e7a,#7895b7);color:#fff;font:inherit;letter-spacing:inherit;font-size:24px;font-weight:300;cursor:pointer}
 #grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 20px}
 #grid .frame{width:100%}
 #grid .cam{background:#d9d9d9}
